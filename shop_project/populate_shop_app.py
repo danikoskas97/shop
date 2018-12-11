@@ -17,6 +17,7 @@ fakegen = Faker()
 def generate_brand():
     brands = ["Nike", "Adidas", "Reebook","Jordan","Banlenciaga" ,"asics", "Timberland", "Puma", "Fila",
     "Geox"]
+    # pk index? 
     index = random.randint(0, 9)
     return brands[index]
 
@@ -31,6 +32,7 @@ def generate_clients():
 def generate_products():
     for product in range(50):
         price = random.randint(60, 400)
+        # pk tu met brand ds cette def?
         brand = generate_brand()
     
 

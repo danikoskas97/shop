@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render 
 from django.http import HttpResponse
 from shop_app.models import Product , Client
 
