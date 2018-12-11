@@ -15,8 +15,7 @@ from shop_app.models import Client, Product
 fakegen = Faker()
 
 def generate_brand():
-    brands = ["Nike", "Adidas", "Reebook","Jordan","Banlenciaga" ,"asics", "Timberland", "Puma", "Fila",
-    "Geox"]
+    brands = ["Nike", "Adidas", "Reebook","Jordan","Banlenciaga" ,"asics", "Timberland", "Puma", "Fila", "Geox"]
     # pk index? 
     index = random.randint(0, 9)
     return brands[index]
