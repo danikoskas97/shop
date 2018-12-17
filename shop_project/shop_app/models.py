@@ -34,7 +34,7 @@ class Client(models.Model):
 		return "<Client {}>".format(self.first_name)
 
 
-class Maillots(models.Model):	
+# class Maillots(models.Model):	
 
 
 
