@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{ user.username }}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      {% if request.user.is_authenticated %}
+      <li class="nav-item">
+        
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'profile_app:edit_profile' request.user.id %}"><button type="button" class="btn btn-warning"">Edit Profile</a>
+      </li>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'profile_app:login' %}"><button type="button" class="btn btn-warning"">Login</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'profile_app:signup' %}"><button type="button" class="btn btn-warning"">Signup</a>
+      </li>
+      {% endif %}
+    </ul>
+
+    <span class="navbar-text">
+      <a class="nav-link" href="{% url 'profile_app:logout_auth' %}">Logout</a>
+    </span>
+  </div>
+</nav>

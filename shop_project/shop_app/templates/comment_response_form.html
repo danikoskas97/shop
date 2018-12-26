@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add a new Response</title>
+</head>
+<body>
+
+  <h1>Ajoutez une reponse au commentaire</h1>
+  <form action="" method="POST">
+    {{ commentresponse_form.as_p }}
+    {% csrf_token %}
+    <input type="submit" name="submit" value="send response">
+  </form>
+
+</body>
+</html>
